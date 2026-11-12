@@ -155,7 +155,7 @@ const PHOTOS = {
 };
 function photoURL(p){const entry=Object.entries(PHOTOS).find(([,v])=>v===p);return 'images/'+(entry?entry[0]:'takayama')+'.jpg?v=3'}
 function photoPage(p){return 'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(p.file).replaceAll('%2F','/')}
-function pic(key,cls=''){const p=PHOTOS[key]||PHOTOS.takayama;return `<a class="${cls}" target="_blank" rel="noopener noreferrer" href="${photoPage(p)}" title="相片出處／版權資訊：${esc(p.by)}"><img loading="lazy" decoding="async" src="${photoURL(p)}" alt="${esc(p.name)}" onerror="this.onerror=null;this.src=this.src.replace(/\.jpg$/,'.svg');this.parentElement.classList.add('photo-missing')"/></a>`}
+function pic(key,cls=''){const p=PHOTOS[key]||PHOTOS.takayama;return `<a class="${cls}" target="_blank" rel="noopener noreferrer" href="${photoPage(p)}" title="相片出處／版權資訊：${esc(p.by)}"><img loading="lazy" decoding="async" src="${photoURL(p)}" alt="${esc(p.name)}" onerror="this.onerror=null;this.src=this.src.replace(/\.jpg(?=\?|$)/,'.svg');this.parentElement.classList.add('photo-missing')"/></a>`}
 function eventPhoto(dayIndex,e){const t=[e[2],e[3]].join(' ');
  if(/白川|合掌|荻町|展望台/.test(t))return 'shirakawa';
  if(/車山|霧峰/.test(t))return 'kurumayama';
