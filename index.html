@@ -142,7 +142,7 @@ function uncertaintyBlock(d,i,j,e){
 // Wikimedia Commons imagery: individual author/CC license linked below each photograph.
 const PHOTOS = {
   takayama:{file:'Takayama Altstadt 01.jpg',name:'飛驒高山古街',by:'Zairon · CC BY-SA 4.0'},
-  shirakawa:{file:'Shirakawa-go 001.jpg',name:'白川鄉冬季合掌村',by:'tsuda · CC BY-SA 2.0'},
+  shirakawa:{file:'Triplets Gassho-zukuri houses (Shirakawa-go) Gifu (49908188231).jpg',name:'白川鄉冬季合掌屋',by:'Koichi Hayakawa · CC BY-SA 2.0'},
   hirayu:{file:'Hirayu onsen05s3872.jpg',name:'平湯温泉一帶',by:'663highland · Wikimedia Commons'},
   hirayumuseum:{file:'Hirayu-minzokukan02ds3872.jpg',name:'平湯民俗館',by:'Wikimedia Commons'},
   kamikochi:{file:'冬、大正池から穂高連峰 - panoramio.jpg',name:'冬季大正池及穗高連峰',by:'Wikimedia Commons／原作者見來源'},
@@ -153,7 +153,7 @@ const PHOTOS = {
   kurumayama:{file:'Kurumayama Kōgen Snow Resort.jpg',name:'車山高原雪場',by:'Ski Mania · Public domain'},
   train:{file:'Narita EXpress.jpg',name:'Narita Express 列車',by:'NY066 · CC BY-SA 4.0'},
 };
-function photoURL(p){const entry=Object.entries(PHOTOS).find(([,v])=>v===p);return 'images/'+(entry?entry[0]:'takayama')+'.jpg?v=3'}
+function photoURL(p){const entry=Object.entries(PHOTOS).find(([,v])=>v===p);return 'images/'+(entry?entry[0]:'takayama')+'.jpg?v=4'}
 function photoPage(p){return 'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(p.file).replaceAll('%2F','/')}
 function pic(key,cls=''){const p=PHOTOS[key]||PHOTOS.takayama;return `<a class="${cls}" target="_blank" rel="noopener noreferrer" href="${photoPage(p)}" title="相片出處／版權資訊：${esc(p.by)}"><img loading="lazy" decoding="async" src="${photoURL(p)}" alt="${esc(p.name)}" onerror="this.onerror=null;this.src=this.src.replace(/\.jpg(?=\?|$)/,'.svg');this.parentElement.classList.add('photo-missing')"/></a>`}
 function eventPhoto(dayIndex,e){const t=[e[2],e[3]].join(' ');
