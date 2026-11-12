@@ -1,0 +1,46 @@
+name: Build and deploy travel website with local photos
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout website
+        uses: actions/checkout@v4
+      - name: Download Wikimedia Commons photos
+        run: python3 download_images.py
+      - name: Check downloaded images
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          manifest=json.loads(pathlib.Path("photo_manifest.json").read_text())
+          missing=[k for k in manifest if not (pathlib.Path("images")/(k+".jpg")).is_file()]
+          if missing:
+              raise SystemExit("Images missing: "+", ".join(missing))
+          print(f"Ready to deploy {len(manifest)} local photo files")
+          PY
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload website (including downloaded photos)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
