@@ -3,7 +3,7 @@
 Local files in `images/*.jpg` are sourced from Wikimedia Commons; author and license are shown below. Please retain these credits and source links. Image reuse must follow each file’s specific license. The SVG files are original placeholders made for this project (not photographs).
 
 - **高山古街・宮川附近** — Zairon, CC BY-SA 4.0. [Source](https://commons.wikimedia.org/wiki/File:Takayama_Altstadt_01.jpg) → `images/takayama.jpg`
-- **白川鄉冬雪** — Tomio344456, CC BY-SA 4.0. [Source](https://commons.wikimedia.org/wiki/File:Ogimachi_Village_in_Winter,_Shirakawa-go_2015.jpg) → `images/shirakawa.jpg`
+- **白川鄉冬季合掌村** — tsuda, CC BY-SA 2.0. [Source](https://commons.wikimedia.org/wiki/File:Shirakawa-go_001.jpg) → `images/shirakawa.jpg`
 - **平湯温泉** — 663highland, CC BY 2.5. [Source](https://commons.wikimedia.org/wiki/File:Hirayu_onsen05s3872.jpg) → `images/hirayu.jpg`
 - **平湯民俗館** — 663highland, 授權請以來源頁為準. [Source](https://commons.wikimedia.org/wiki/File:Hirayu-minzokukan02ds3872.jpg) → `images/hirayumuseum.jpg`
 - **上高地冬季大正池** — Wikimedia Commons 原作者, 授權請以來源頁為準. [Source](https://commons.wikimedia.org/wiki/File:冬、大正池から穂高連峰_-_panoramio.jpg) → `images/kamikochi.jpg`
