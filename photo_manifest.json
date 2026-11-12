@@ -1,0 +1,79 @@
+{
+  "takayama": {
+    "file": "Takayama Altstadt 01.jpg",
+    "name": "高山古街・宮川附近",
+    "by": "Zairon",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Takayama_Altstadt_01.jpg"
+  },
+  "shirakawa": {
+    "file": "Ogimachi Village in Winter, Shirakawa-go 2015.jpg",
+    "name": "白川鄉冬雪",
+    "by": "Tomio344456",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Ogimachi_Village_in_Winter,_Shirakawa-go_2015.jpg"
+  },
+  "hirayu": {
+    "file": "Hirayu onsen05s3872.jpg",
+    "name": "平湯温泉",
+    "by": "663highland",
+    "license": "CC BY 2.5",
+    "page": "https://commons.wikimedia.org/wiki/File:Hirayu_onsen05s3872.jpg"
+  },
+  "hirayumuseum": {
+    "file": "Hirayu-minzokukan02ds3872.jpg",
+    "name": "平湯民俗館",
+    "by": "663highland",
+    "license": "授權請以來源頁為準",
+    "page": "https://commons.wikimedia.org/wiki/File:Hirayu-minzokukan02ds3872.jpg"
+  },
+  "kamikochi": {
+    "file": "冬、大正池から穂高連峰 - panoramio.jpg",
+    "name": "上高地冬季大正池",
+    "by": "Wikimedia Commons 原作者",
+    "license": "授權請以來源頁為準",
+    "page": "https://commons.wikimedia.org/wiki/File:冬、大正池から穂高連峰_-_panoramio.jpg"
+  },
+  "kappa": {
+    "file": "Kamikochi - Kamikochi6538.jpg",
+    "name": "上高地河童橋（秋季景）",
+    "by": "lumoplank",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Kamikochi_-_Kamikochi6538.jpg"
+  },
+  "shiorie": {
+    "file": "Hirayu onsen05s3872.jpg",
+    "name": "飛驒溫泉區參考圖（非溪流莊實拍）",
+    "by": "663highland",
+    "license": "CC BY 2.5",
+    "page": "https://commons.wikimedia.org/wiki/File:Hirayu_onsen05s3872.jpg"
+  },
+  "suwa": {
+    "file": "Lake Suwa in August 2026.jpg",
+    "name": "諏訪湖（非冬季）",
+    "by": "Syced",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Lake_Suwa_in_August_2026.jpg"
+  },
+  "matsumoto": {
+    "file": "MatsumotoCastle.jpg",
+    "name": "松本城",
+    "by": "Fg2",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:MatsumotoCastle.jpg"
+  },
+  "kurumayama": {
+    "file": "Kurumayama Kōgen Snow Resort.jpg",
+    "name": "車山高原雪場",
+    "by": "Ski Mania",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Kurumayama_Kōgen_Snow_Resort.jpg"
+  },
+  "train": {
+    "file": "Narita EXpress.jpg",
+    "name": "成田特快列車",
+    "by": "NY066",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Narita_EXpress.jpg"
+  }
+}

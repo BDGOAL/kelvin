@@ -1,37 +1,21 @@
-# Japan Winter Trip 2026 · GitHub Pages
+# Japan Winter Trip 2026 — GitHub Pages
 
-六日五夜日本行程網站（繁體中文／廣東話），涵蓋 2026 年 12 月 22–27 日交通、景點、住宿、餐飲、預算及預訂待辦。
+## How to publish (local photographs)
 
-## 直接部署 GitHub Pages
+1. Upload the **whole project directory**, including `index.html`, `images/`, `download_images.py`, `photo_manifest.json`, and `.github/workflows/pages.yml`, to a public GitHub repository on the `main` branch.
+2. In **Settings → Pages → Build and deployment → Source**, select **GitHub Actions**.
+3. The included GitHub Actions workflow downloads the photographs from Wikimedia Commons during deployment and packages them with the site. **The deployed HTML uses only local `/images/*.jpg` paths, not third-party image hotlinks.**
+4. Open **Actions** to check whether all 11 images downloaded. A failed image request makes the build fail rather than quietly showing a blank picture; you can rerun the workflow.
+5. Alternatively, run `python3 download_images.py` on your own computer and commit the generated `images/*.jpg` files before publishing; then use ordinary branch-based GitHub Pages if you prefer.
 
-1. 在 GitHub 建立一個新的 public 或 private repository（是否支援 Pages 視乎帳戶與設定）。
-2. 上傳本資料夾中的 `index.html` 到 repository 根目錄。
-3. 到 **Settings → Pages**，在 **Build and deployment** 選擇 **Deploy from a branch**。
-4. Branch 選 `main`，folder 選 `/(root)`，儲存並等候部署。
-5. 以 GitHub 顯示的 Pages 網址開啟網頁。
+## Image fallback
 
-## 使用
+The ZIP contains labeled SVG placeholders in `images/`, **not the original JPEG photo files**. The current creation environment cannot download the original image bytes directly. Until the download script has run successfully, the website shows transparent, clearly labeled scenic placeholders rather than blank gray rectangles. The script uses the Wikimedia Commons API, not broken `Special:FilePath` hotlinks.
 
-- 頂部分頁：總覽、Day 1–6、住宿＋Meals、預算、待辦＋連結。
-- 預算頁：可調整 JPY→HKD 匯率；將同步更新港幣換算。
-- 待辦頁：可以勾選已完成項目。
-- 匯率及勾選狀態存在瀏覽器 `localStorage`，**不會同步不同手機，也不會更新 Google Sheets**。
-- 不需要 Node.js、npm、資料庫或第三方 CSS／JS 套件，`index.html` 可直接在瀏覽器開啟。
+## Credits
 
-## 資料維護
+Read `PHOTO_CREDITS.md`. The downloaded files retain their respective Wikimedia Commons licenses. Please don't remove attribution. Some photos are not winter scenes; the Shiorie illustration refers to the surrounding hot spring area, not a photo of the hotel's room.
 
-更改 `index.html` 中 `<script>` 裡的 `DATA` 常數：
-- `rate`：預設日圓兌港幣匯率
-- `days`：每天時間軸
-- `hotels`：住宿與套餐
-- `budget`：金額表
-- `tasks`：待辦
-- `sources`：官方網站連結
+## Other functions
 
-**資料狀態**：2026-11-12 規劃版本。航班已購；其他預訂須以正式確認信為準。冬季上高地雪況和公共交通可能調整。請勿公開任何訂單編號、護照資料或個人聯絡方式。
-
-## 未確定項目的原因說明
-
-2026-11-12 更新：各每日時間軸中，對於「未訂／待確認／估算／有房未訂」等項目，按「🔎 點解未確定？睇影響及處理方法」可展開具體原因、可能影響及下一步確認／後備方案。總覽亦加入 12/25 溪流莊早餐、午餐與 Little Peaks 集合的詳細說明。
-
-同期 Google Sheets 新增「待確認原因與後備」分頁，方便協作及逐項核對。以上內容均為行程規劃、並非已完成預訂的證明。
+Day tabs, booking checklist and editable exchange rate remain. Checklist data stays in the user's browser; it does not sync with Google Sheets.
